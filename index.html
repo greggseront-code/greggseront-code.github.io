@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyrus Consulting — AI-augmented software engineering</title>
+  <meta name="description" content="Formation et consulting en intégration pragmatique de l’IA dans le développement logiciel." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-2: #11172a;
+      --panel: #ffffff;
+      --panel-soft: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: #0f766e;
+      --accent-2: #134e4a;
+      --hero-text: #f8fafc;
+      --hero-muted: #cbd5e1;
+      --max: 1120px;
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--panel-soft);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      background:
+        radial-gradient(circle at top right, rgba(15,118,110,0.18), transparent 30%),
+        linear-gradient(180deg, #0b1020 0%, #11172a 100%);
+      color: var(--hero-text);
+      padding-bottom: 4rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      color: var(--hero-muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 3.5rem 0 1rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: var(--hero-muted);
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--hero-muted);
+      font-size: 1.08rem;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.15rem;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: 0.18s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-2);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.16);
+      color: white;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .image-placeholder {
+      min-height: 360px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.18);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        repeating-linear-gradient(
+          0deg,
+          transparent 0,
+          transparent 28px,
+          rgba(255,255,255,0.04) 29px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 28px,
+          rgba(255,255,255,0.04) 29px
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--hero-muted);
+      font-size: 0.96rem;
+    }
+
+    main {
+      padding: 3rem 0 5rem;
+    }
+
+    section {
+      margin-top: 3.5rem;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      line-height: 1.15;
+      margin: 0 0 0.7rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .list li + li {
+      margin-top: 0.45rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .contact-box {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p {
+      margin-top: 0;
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: white;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: #64748b;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-3,
+      .grid-2,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .image-placeholder {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand">Gyrus Consulting</div>
+        <div class="nav-links">
+          <a href="#offres">Offres</a>
+          <a href="#approche">Approche</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Formation & consulting pour équipes techniques</div>
+          <h1>AI-augmented software engineering</h1>
+          <p>
+            Intégrer l’IA dans les pratiques de développement sans perdre en rigueur,
+            en qualité logicielle ni en maîtrise des workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Prendre contact</a>
+            <a class="btn btn-secondary" href="#offres">Voir les offres</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="image-placeholder">
+            Placeholder image<br>
+            Idée visuelle recommandée : code review, diff Git, diagramme d’architecture
+            ou workflow de développement — pas de circuits IA génériques.
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section id="probleme">
+        <div class="section-header">
+          <div class="section-kicker">Constat</div>
+          <h2>L’IA est déjà dans les équipes. Souvent sans cadre clair.</h2>
+          <p>
+            Le problème n’est pas l’usage de l’IA en soi, mais son intégration dans
+            le travail réel : compréhension du code généré, revue, architecture,
+            qualité et continuité du projet.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Code généré sans compréhension</h3>
+            <p>Accélération apparente, mais fragilité dès qu’il faut maintenir ou corriger.</p>
+          </div>
+          <div class="card">
+            <h3>Workflow improvisé</h3>
+            <p>Utilisation opportuniste des outils, sans méthode reproductible.</p>
+          </div>
+          <div class="card">
+            <h3>Dette technique</h3>
+            <p>Le gain immédiat peut dégrader la qualité globale si le cadre manque.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="approche">
+        <div class="section-header">
+          <div class="section-kicker">Approche</div>
+          <h2>Une approche centrée sur l’ingénierie, pas sur l’effet démo.</h2>
+          <p>
+            L’objectif n’est pas de “faire utiliser un outil”, mais d’intégrer l’IA
+            dans une pratique de développement maîtrisée.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Workflows concrets</h3>
+            <p>Exploration de codebase, correction, revue, tests, intégration.</p>
+          </div>
+          <div class="card">
+            <h3>Usage critique</h3>
+            <p>Quand faire confiance, quand vérifier, quand refuser la proposition du modèle.</p>
+          </div>
+          <div class="card">
+            <h3>Projets réels</h3>
+            <p>Prise en compte du contexte, des standards et des contraintes d’équipe.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="offres">
+        <div class="section-header">
+          <div class="section-kicker">Offres</div>
+          <h2>Formation et accompagnement</h2>
+          <p>
+            Deux formats simples : montée en compétence des développeurs, et appui
+            aux équipes qui veulent structurer leurs usages.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Formation développeurs</h3>
+            <ul class="list">
+              <li>Usage des LLM dans un workflow de développement</li>
+              <li>Compréhension et revue du code généré</li>
+              <li>Agents, MCP et outils connectés</li>
+              <li>Rigueur, tests, architecture et limites des assistants</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Consulting / accompagnement</h3>
+            <ul class="list">
+              <li>Analyse des usages actuels</li>
+              <li>Structuration des pratiques de l’équipe</li>
+              <li>Mise en place de workflows réalistes</li>
+              <li>Alignement avec les standards de développement existants</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultats">
+        <div class="section-header">
+          <div class="section-kicker">Résultats</div>
+          <h2>Ce que les équipes cherchent en général</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Plus de contrôle</h3>
+            <p>Comprendre ce qui est produit au lieu de simplement l’accepter.</p>
+          </div>
+          <div class="card">
+            <h3>Moins d’erreurs évitables</h3>
+            <p>Réduire les dérives liées à un usage non structuré des assistants.</p>
+          </div>
+          <div class="card">
+            <h3>Un workflow réutilisable</h3>
+            <p>Passer d’astuces ponctuelles à une pratique intégrée dans l’équipe.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-header">
+          <div class="section-kicker">À propos</div>
+          <h2>Profil</h2>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <h3>Positionnement</h3>
+            <p>
+              Consultant et formateur en intégration pragmatique de l’IA dans le
+              développement logiciel, avec une approche orientée qualité,
+              compréhension et workflow.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Contexte</h3>
+            <p>
+              Enseignant en informatique, actif sur les usages professionnels et
+              pédagogiques de l’IA, avec un ancrage dans les réalités du développement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2>Discuter d’une formation ou d’un accompagnement</h2>
+        </div>
+
+        <div class="contact-box">
+          <p>
+            Le site peut rester simple. Ce qui compte surtout ici, c’est que le
+            positionnement soit clair et que la prise de contact soit directe.
+          </p>
+
+          <div class="contact-links">
+            <a class="chip" href="mailto:contact@tondomaine.be">contact@tondomaine.be</a>
+            <a class="chip" href="mailto:gregory@tondomaine.be">gregory@tondomaine.be</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © 2026 — Gyrus Consulting
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
