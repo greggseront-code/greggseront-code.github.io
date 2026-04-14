@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gyrus Consulting — Formation Claude Code pour équipes de développement</title>
-  <meta name="description" content="Formation pratique Claude Code pour équipes de développement : exploration de codebase, implémentation, revue, tests et intégration dans un workflow réel." />
+  <title>Gyrus Consulting — Formation Claude Code dans un vrai processus de développement</title>
+  <meta name="description" content="Formation pratique Claude Code pour apprendre à travailler sur un projet réel : exploration de codebase, CLAUDE.md, skills, spécification, implémentation, review et tests." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,16 +23,14 @@
       <section class="hero hero-compact" aria-labelledby="formation-title">
         <div>
           <div class="eyebrow">Offre détaillée</div>
-          <h1 id="formation-title">Formation Claude Code pour équipes de développement</h1>
+          <h1 id="formation-title">Utiliser Claude Code dans un vrai processus de développement</h1>
           <p>
             <strong>Prochaine session ouverte : 4 juin à Bruxelles</strong>
           </p>
           <p>
-            Formation pratique à l’usage de Claude Code dans un workflow de développement réel.
-          </p>
-          <p>
-            L’objectif n’est pas d’apprendre un outil, mais de l’intégrer dans l’exploration
-            de codebase, le développement, la revue, les tests et l’intégration.
+            Pas une série d’astuces de prompting. Une journée pour apprendre à faire tourner
+            Claude Code sur un projet réel, de l’exploration de la base de code jusqu’à
+            l’implémentation d’une feature testée et reviewée.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#inscription">S’inscrire à la formation</a>
@@ -44,15 +42,15 @@
         <aside class="hero-panel" aria-label="Informations clés">
           <h2>Format</h2>
           <ul class="list">
-            <li>1 jour</li>
-            <li>En équipe</li>
+            <li>1 journée (7h)</li>
+            <li>Présentiel ou distanciel</li>
             <li>Prochaine session ouverte : 4 juin à Bruxelles</li>
-            <li>Public : développeurs utilisant déjà des assistants IA</li>
+            <li>Public : développeurs et tech leads</li>
           </ul>
           <h2>Objectif</h2>
           <p>
-            Passer d’un usage opportuniste de l’IA à un usage maîtrisé avec Claude Code
-            comme environnement de travail central.
+            Passer du vibe coding à une méthode structurée : exploration, cadrage,
+            spécification, build, review et tests.
           </p>
         </aside>
       </section>
@@ -61,78 +59,111 @@
 
   <main>
     <div class="container">
+      <section id="public" aria-labelledby="public-title">
+        <div class="section-header">
+          <div class="section-kicker">Public</div>
+          <h2 id="public-title">À qui s’adresse cette formation</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Développeurs</h3>
+            <p>
+              Vous utilisez déjà un assistant IA, ou vous allez le faire. Vous voulez intégrer
+              Claude Code dans votre travail réel sans perdre la maîtrise de ce que vous produisez.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Tech leads</h3>
+            <p>
+              Chaque développeur improvise avec son outil. Vous voulez poser un cadre commun :
+              contexte partagé, conventions, règles stables, au lieu de repartir de zéro à chaque projet.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="fil-rouge" aria-labelledby="fil-rouge-title">
+        <div class="section-header">
+          <div class="section-kicker">Fil rouge</div>
+          <h2 id="fil-rouge-title">Un projet existant, une feature à ajouter</h2>
+          <p>
+            Les participants arrivent sur une base de code qu’ils ne connaissent pas, comme en entreprise.
+            La journée suit le chemin complet : comprendre ce qui existe, poser le cadre, spécifier
+            et implémenter une feature de façon itérative, avec review et tests à chaque étape.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            <strong>Le projet fil rouge est en TypeScript, backend Node.js.</strong>
+            Il n’est pas nécessaire de maîtriser ce stack : apprendre à travailler avec Claude Code,
+            c’est précisément apprendre à naviguer dans un projet sans tout connaître d’avance.
+            La méthode, le cadrage et les réflexes acquis s’appliquent à n’importe quel stack.
+          </p>
+        </div>
+      </section>
+
       <section id="programme" aria-labelledby="programme-title">
         <div class="section-header">
           <div class="section-kicker">Programme</div>
-          <h2 id="programme-title">Intégrer Claude Code dans un workflow réel</h2>
+          <h2 id="programme-title">Déroulé de la journée</h2>
           <p>
-            Le programme est structuré autour des tâches concrètes d’une équipe de développement,
-            et non autour d’une démonstration isolée de l’outil.
+            Le programme suit un vrai cycle de développement : exploration, cadrage,
+            spécification, implémentation, review et validation.
           </p>
         </div>
 
         <div class="program-grid">
           <article class="program-step">
-            <h3>1. Prise en main de Claude Code</h3>
-            <ul class="list">
-              <li>Fonctionnement général</li>
-              <li>Modes d’interaction</li>
-              <li>Ce que Claude Code fait bien et ce qu’il fait mal</li>
-            </ul>
+            <h3>1. Explorer la base de code avec Claude Code</h3>
+            <p>
+              Comprendre rapidement un projet inconnu : structure, conventions, dépendances
+              et zones sensibles. Claude Code devient un outil d’onboarding technique.
+            </p>
           </article>
 
           <article class="program-step">
-            <h3>2. Explorer une codebase avec Claude Code</h3>
-            <ul class="list">
-              <li>Naviguer dans un projet inconnu</li>
-              <li>Localiser une fonctionnalité</li>
-              <li>Comprendre une architecture</li>
-            </ul>
+            <h3>2. Poser le cadre : CLAUDE.md et skills</h3>
+            <p>
+              À partir de ce qui a été découvert, écrire un <span class="mono">CLAUDE.md</span>
+              utile et configurer les skills adaptés au stack et aux contraintes du projet :
+              ce qu’on délègue, ce qu’on garde, comment on travaille ensemble.
+            </p>
+            <div class="artifact-list" aria-label="Livrables abordés">
+              <span>CLAUDE.md</span>
+              <span>skills/</span>
+              <span>rules</span>
+            </div>
           </article>
 
           <article class="program-step">
-            <h3>3. Corriger un bug avec Claude Code</h3>
-            <ul class="list">
-              <li>Analyser un problème</li>
-              <li>Proposer une correction</li>
-              <li>Vérifier la cohérence globale</li>
-            </ul>
+            <h3>3. Spécifier la feature et son architecture</h3>
+            <p>
+              Clarifier le besoin, faire apparaître les ambiguïtés, rendre visibles les choix
+              de conception avant de toucher au code. Ne pas laisser Claude Code décider seul
+              de l’architecture.
+            </p>
           </article>
 
           <article class="program-step">
-            <h3>4. Implémenter une fonctionnalité</h3>
-            <ul class="list">
-              <li>Partir d’un besoin réel</li>
-              <li>Générer une première version</li>
-              <li>Adapter la proposition au contexte du projet</li>
-            </ul>
+            <h3>4. Implémenter de façon itérative</h3>
+            <p>
+              Construire par petits incréments. À chaque étape : review du code généré,
+              identification des dérives, correction du cadre si nécessaire.
+            </p>
           </article>
 
           <article class="program-step">
-            <h3>5. Revue du code généré</h3>
-            <ul class="list">
-              <li>Détecter les erreurs fréquentes</li>
-              <li>Identifier les incohérences et les approximations</li>
-              <li>Intégrer le résultat dans un processus de review</li>
-            </ul>
-          </article>
-
-          <article class="program-step">
-            <h3>6. Tests et intégration</h3>
-            <ul class="list">
-              <li>Générer ou adapter des tests</li>
-              <li>Vérifier les effets de bord</li>
-              <li>Intégrer Claude Code dans le workflow Git et CI/CD</li>
-            </ul>
-          </article>
-
-          <article class="program-step">
-            <h3>7. Usage avancé : agents et outils</h3>
-            <ul class="list">
-              <li>Utilisation de Claude Code avec Git</li>
-              <li>Introduction au MCP</li>
-              <li>Interaction avec des outils externes</li>
-            </ul>
+            <h3>5. Tester et valider</h3>
+            <p>
+              Écrire et relire les tests avec Claude Code. Ajouter les cas limites.
+              Décider explicitement ce qu’on accepte, pas seulement ce qui compile.
+            </p>
+            <p>
+              Pour les participants qui avancent plus vite : tests d’interface.
+            </p>
           </article>
         </div>
       </section>
@@ -140,15 +171,15 @@
       <section id="resultats" aria-labelledby="resultats-title">
         <div class="section-header">
           <div class="section-kicker">Résultats attendus</div>
-          <h2 id="resultats-title">Ce que les développeurs doivent savoir faire à l’issue de la formation</h2>
+          <h2 id="resultats-title">Ce que les participants repartent avec</h2>
         </div>
 
         <div class="card">
           <ul class="list">
-            <li>Comprendre ce que produit Claude Code</li>
-            <li>Savoir quand faire confiance ou non</li>
-            <li>Utiliser l’outil dans un workflow structuré</li>
-            <li>Éviter les dérives classiques : code mal compris et dette technique</li>
+            <li>Un <span class="mono">CLAUDE.md</span> fonctionnel, réutilisable sur leurs propres projets</li>
+            <li>Des skills configurés et connectés à un stack technique réel</li>
+            <li>Une méthode claire : exploration, cadrage, spec, build, review, test</li>
+            <li>Les réflexes pour éviter le vibe coding sans ralentir inutilement</li>
           </ul>
         </div>
       </section>
