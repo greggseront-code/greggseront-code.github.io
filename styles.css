@@ -92,6 +92,11 @@ img {
   grid-template-columns: 1.35fr 0.75fr;
 }
 
+.hero-text-only {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+}
+
 .eyebrow {
   display: inline-block;
   padding: 0.35rem 0.7rem;
