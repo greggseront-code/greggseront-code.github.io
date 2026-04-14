@@ -313,6 +313,77 @@ h3 {
   margin-top: 1rem;
 }
 
+.signup-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.signup-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(15, 118, 110, 0.14);
+}
+
+.form-consent {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.form-consent input {
+  width: auto;
+  margin-top: 0.35rem;
+}
+
+.signup-form .form-trap {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-note,
+.form-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-status {
+  font-weight: 600;
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -361,6 +432,7 @@ footer {
   .hero-compact,
   .grid-3,
   .grid-2,
+  .form-grid,
   .split {
     grid-template-columns: 1fr;
   }
